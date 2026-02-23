@@ -1,0 +1,164 @@
+@import "tailwindcss";
+
+@theme {
+  --color-parchment: #FBF7F0;
+  --color-parchment-dark: #F0E8D8;
+  --color-ink: #2C1810;
+  --color-ink-light: #5C4033;
+  --color-teal: #0A4D4D;
+  --color-teal-light: #0E6B6B;
+  --color-teal-dark: #073636;
+  --color-gold: #C4973B;
+  --color-gold-light: #D4AD5E;
+  --color-gold-dark: #9A7428;
+  --color-emerald: #1B6B4A;
+  --color-ruby: #9B2335;
+  --color-sand: #E8D5B7;
+  --color-sand-light: #F2E8D5;
+  --color-night: #141E2B;
+  --color-night-light: #1E2D3D;
+
+  --font-arabic: 'Amiri', serif;
+  --font-display: 'Cormorant Garamond', serif;
+  --font-body: 'Source Serif 4', serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-parchment);
+  color: var(--color-ink);
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.arabic {
+  font-family: var(--font-arabic);
+  direction: rtl;
+  line-height: 2.2;
+  font-size: 1.3em;
+}
+
+.arabic-large {
+  font-family: var(--font-arabic);
+  direction: rtl;
+  line-height: 2.4;
+  font-size: 1.8em;
+}
+
+.arabic-xl {
+  font-family: var(--font-arabic);
+  direction: rtl;
+  line-height: 2.6;
+  font-size: 2.4em;
+}
+
+.heading-display {
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.pattern-bg {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C4973B' fill-opacity='0.06'%3E%3Cpath d='M30 0L60 30L30 60L0 30z M30 8L52 30L30 52L8 30z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.star-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M40 0l10 30h30l-24 18 10 30-26-18-26 18 10-30L0 30h30z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.card-manuscript {
+  background: linear-gradient(135deg, var(--color-parchment) 0%, var(--color-parchment-dark) 100%);
+  border: 1px solid color-mix(in srgb, var(--color-gold) 20%, transparent);
+  box-shadow: 0 1px 3px rgba(44, 24, 16, 0.06), 0 4px 12px rgba(44, 24, 16, 0.04);
+}
+
+.card-manuscript:hover {
+  border-color: color-mix(in srgb, var(--color-gold) 40%, transparent);
+  box-shadow: 0 2px 8px rgba(44, 24, 16, 0.08), 0 8px 24px rgba(44, 24, 16, 0.06);
+}
+
+.flashcard-container { perspective: 1000px; }
+
+.flashcard-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.flashcard-inner.flipped { transform: rotateY(180deg); }
+
+.flashcard-front, .flashcard-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.flashcard-back { transform: rotateY(180deg); }
+
+.divider-gold {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, var(--color-gold-light) 20%, var(--color-gold) 50%, var(--color-gold-light) 80%, transparent 100%);
+}
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--color-sand-light); }
+::-webkit-scrollbar-thumb { background: var(--color-sand); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-gold); }
+
+.stagger-1 { animation-delay: 0.05s; }
+.stagger-2 { animation-delay: 0.1s; }
+.stagger-3 { animation-delay: 0.15s; }
+.stagger-4 { animation-delay: 0.2s; }
+.stagger-5 { animation-delay: 0.25s; }
+.stagger-6 { animation-delay: 0.3s; }
+.stagger-7 { animation-delay: 0.35s; }
+.stagger-8 { animation-delay: 0.4s; }
+
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-fade-slide-up { animation: fadeSlideUp 0.5s ease-out both; }
+.animate-fade-in { animation: fadeIn 0.4s ease-out both; }
+.animate-scale-in { animation: scaleIn 0.3s ease-out both; }
+
+.quiz-correct { animation: correctPulse 0.5s ease-out; }
+.quiz-incorrect { animation: incorrectShake 0.5s ease-out; }
+
+@keyframes correctPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes incorrectShake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-4px); }
+  40%, 80% { transform: translateX(4px); }
+}
+
+.progress-fill { transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
+
+::selection {
+  background-color: color-mix(in srgb, var(--color-gold) 30%, transparent);
+  color: var(--color-ink);
+}
