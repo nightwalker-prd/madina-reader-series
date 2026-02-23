@@ -445,6 +445,32 @@ export const book8: Book = {
           ],
         },
         {
+          title: 'Optional Dropping of Nun in kana yakunu',
+          arabicTitle: 'حذف نون يكون',
+          explanation:
+            'The four majzum forms of yakunu may optionally drop the nun (the third radical). This omission is peculiar to kana yakunu and does not apply to other verbs.',
+          examples: [
+            { arabic: 'وَلَمْ أَكُ بَغِيّاً', english: 'And I was not an unchaste woman (Quran 19:20).' },
+            { arabic: 'وَقَدْ خَلَقْتُكَ مِنْ قَبْلُ وَلَمْ تَكُ شَيْئاً', english: 'And I created you before while you were nothing (Quran 19:9).' },
+            { arabic: 'قالوا لَمْ نَكُ مِنَ المُصَلِّينَ', english: 'They said: We were not among those who perform salah (Quran 74:43).' },
+          ],
+          rules: [
+            'Full form → shortened: يَكُنْ → يَكُ, تَكُنْ → تَكُ, أَكُنْ → أَكُ, نَكُنْ → نَكُ',
+            'The dropping of nun is optional, not required',
+            'This rule is unique to كان يكون and does not apply to other verbs',
+          ],
+        },
+        {
+          title: 'Compound Time-Words',
+          arabicTitle: 'الظروف المركّبة',
+          explanation:
+            'Two nouns can be combined into one compound time-word that is indeclinable with fathah on both parts (mabni ala fath al-juz\'ayn).',
+          examples: [
+            { arabic: 'أعْمَلُ لَيْلَ نَهَارَ', english: 'I work day and night.' },
+            { arabic: 'نَعْبُدُ اللهَ صَباحَ مَساءَ', english: 'We worship Allah morning and evening.' },
+          ],
+        },
+        {
           title: 'Verb Classification: Triliteral and Quadriliteral',
           arabicTitle: 'الفعل الثلاثي والرباعي، المجرّد والمزيد',
           explanation:
@@ -557,6 +583,71 @@ export const book8: Book = {
             'Imperative: from original form (تُأَفْعِلُ → drop prefix → أَفْعِلْ)',
             'Active participle: مُفْعِل, Passive participle: مُفْعَل',
             'Non-sound verbs: أَقَامَ/يُقِيمُ/إِقَامَة, آمَنَ/يُؤْمِنُ/إِيمَان, أَتَمَّ/يُتِمُّ/إِتْمَام',
+          ],
+        },
+        {
+          title: 'The Lam of Emphasis (Lam al-Ibtida\')',
+          arabicTitle: 'لامُ الابْتِدَاءِ',
+          explanation:
+            'A lam with fathah prefixed to the mubtada\' (subject) for emphasis. It confirms and stresses the content of the sentence. It must not be confused with the preposition li- which has kasrah (though it takes fathah before pronouns like lahu, laka, laha).',
+          examples: [
+            { arabic: 'وَلَأَجْرُ الآخِرَةِ أَكْبَرُ', english: 'And indeed the reward of the Hereafter is greater (Quran 16:41).' },
+            { arabic: 'وَلَذِكْرُ اللَّهِ أَكْبَرُ', english: 'And indeed the remembrance of Allah is the greatest (Quran 29:45).' },
+            { arabic: 'وَلَعَذَابُ الآخِرَةِ أَكْبَرُ', english: 'And indeed the punishment of the Hereafter is greater (Quran 39:26).' },
+          ],
+          rules: [
+            'The lam al-ibtida\' has fathah (لَـ), not kasrah',
+            'It does not change the i\'rab of the mubtada\' — the noun remains marfu\'',
+            'Distinct from the preposition li- (لِـ) which has kasrah except before pronouns (لَهُ، لَكَ)',
+          ],
+        },
+        {
+          title: 'The Verb asbaha (Sister of kana)',
+          arabicTitle: 'أَصْبَحَ — أخوات كان',
+          explanation:
+            'asbaha is a sister of kana meaning "to become in the morning" or simply "to become." Its ism is marfu\' and its khabar is mansub.',
+          examples: [
+            { arabic: 'أَصْبَحَ حَامِدٌ مَرِيضاً', english: 'Hamid fell ill in the morning.' },
+            { arabic: 'أَصْبَحْتُ نَشِيطاً', english: 'I became active in the morning.' },
+            { arabic: 'فَأَصْبَحْتُمْ بِنِعْمَتِهِ إِخْوَاناً', english: 'And you became brothers by His grace (Quran 3:103).' },
+          ],
+        },
+        {
+          title: 'The Verb awshaka (To Be About To)',
+          arabicTitle: 'أَوْشَكَ — أخوات كان',
+          explanation:
+            'awshaka is a sister of kana meaning "to be near to / about to." Its mudari\' is yushiku. Its khabar must always be a masdar mu\'awwal (an + mudari\' verb).',
+          examples: [
+            { arabic: 'يُوشِكُ الطُّلاَّبُ أَنْ يَرْجِعُوا إِلَى بِلاَدِهِمْ', english: 'The students are about to return to their countries.' },
+            { arabic: 'أَوْشَكَ الدَّرْسُ أَنْ يَنْتَهِيَ', english: 'The lesson is about to end.' },
+            { arabic: 'أَوْشَكُ أَنْ أَتَزَوَّجَ', english: 'I am about to get married.' },
+          ],
+        },
+        {
+          title: 'The Completely Indefinite ma',
+          arabicTitle: 'ما النَّكِرَةُ التَّامَّةُ المُبْهَمَةُ',
+          explanation:
+            'This ma is an indefinite adjective meaning "some" or "certain" and serves as a na\'t (adjective) to what precedes it.',
+          examples: [
+            { arabic: 'أَعْطِنِي كِتَاباً مَا', english: 'Give me some book.' },
+            { arabic: 'رَأَيْتُهُ فِي مَكَانٍ مَا', english: 'I have seen him somewhere.' },
+            { arabic: 'سَتَفْهَمُ هذا يَوْماً مَا', english: 'You will understand this someday.' },
+          ],
+        },
+        {
+          title: 'Rules for Writing ibn',
+          arabicTitle: 'قواعد كتابة اِبْن',
+          explanation:
+            'The alif of ibn is omitted in writing when it falls between the names of the son and the father. Two conditions: the father\'s name must not be preceded by a title, and all three words must be on the same line.',
+          examples: [
+            { arabic: 'مُحَمَّدُ بْنُ وِلْيَمَ', english: 'Muhammad son of William (alif omitted).' },
+            { arabic: 'الحَسَنُ ابْنُ الإمَامِ عَلِيٍّ', english: 'Al-Hasan son of Imam Ali (alif retained due to title).' },
+          ],
+          rules: [
+            'The alif is omitted between a son\'s name and father\'s name: محمدُ بنُ وليمَ',
+            'The alif is retained if the father\'s name is preceded by a title',
+            'The alif is retained if the names are split across lines',
+            'The word preceding ibn loses its tanwin: بِلاَلُ بْنُ حَامِدٍ (not بِلاَلٌ بْنُ)',
           ],
         },
       ],
@@ -708,21 +799,68 @@ export const book8: Book = {
           title: 'The Verb amsa (Sister of kana)',
           arabicTitle: 'أَمْسَى — أخوات كان',
           explanation:
-            'amsa is a sister of kana meaning "to become in the evening." Its ism is marfu\' and its khabar is mansub. Also asbaha (to become in the morning) and awshaka (to be about to).',
+            'amsa is a sister of kana meaning "to become in the evening." Its ism is marfu\' and its khabar is mansub. Used in greetings and to describe evening states.',
           examples: [
             { arabic: 'كَيْفَ أَمْسَيْتُمْ؟ — أَمْسَيْنَا بِخَيْرٍ', english: 'How are you this evening? — We are well.' },
-            { arabic: 'أَصْبَحَ حَامِدٌ مَرِيضاً', english: 'Hamid fell ill in the morning.' },
-            { arabic: 'أَوْشَكَ الدَّرْسُ أَنْ يَنْتَهِيَ', english: 'The lesson is about to end.' },
+            { arabic: 'أَمْسَى الجَوُّ لَطِيفاً', english: 'The weather became fine in the evening.' },
+            { arabic: 'أَمْسَيْتُ مَرِيضاً', english: 'I became ill in the evening.' },
+          ],
+        },
+        {
+          title: 'The Verb adra (to inform)',
+          arabicTitle: 'الفعل أَدْرَى',
+          explanation:
+            'adra is Form IV of dara (to know). It means "to make someone know / to inform." The Quranic expression wa-ma adraka ("and what informed you") appears about thirteen times in the Quran.',
+          examples: [
+            { arabic: 'وَمَا أَدْرَاكَ أَنَّهُ يَكْذِبُ؟', english: 'And what informed you that he is telling a lie?' },
+            { arabic: 'وَمَا أَدْرَاكَ مَا لَيْلَةُ القَدْرِ', english: 'And what will inform you what the Night of Decree is? (Quran 97:2)' },
+          ],
+        },
+        {
+          title: 'Plural of Plurals',
+          arabicTitle: 'جَمْعُ الجَمْع',
+          explanation:
+            'Some nouns have a plural of the plural (jam\' al-jam\'). The jam\' al-jam\' mostly has the same meaning as the plural, but in some cases it carries a different meaning.',
+          examples: [
+            { arabic: 'طَرِيق → طُرُق → طُرُقَات', english: 'road -> roads -> roads (plural of plural)' },
+            { arabic: 'مَكَان → أَمْكِنَة → أَمَاكِن', english: 'place -> places -> places (plural of plural)' },
+            { arabic: 'يَد → أَيْدٍ → أَيَادٍ', english: 'hand -> hands -> favours (meaning changes)' },
+          ],
+          rules: [
+            'Most plurals of plurals have the same meaning as the first plural',
+            'Some carry a different meaning: أَيْدٍ (hands) → أَيَادٍ (favours), بُيُوت (houses) → بُيُوتَات (respectable families)',
+          ],
+        },
+        {
+          title: 'The Masdar Pattern fa\'al',
+          arabicTitle: 'المصدر على وزن فَعَال',
+          explanation:
+            'One of the patterns of the masdar (verbal noun) for triliteral verbs is fa\'al. Many disease words also follow the related pattern fu\'al.',
+          examples: [
+            { arabic: 'ذَهَبَ → ذَهَاب', english: 'to go -> going' },
+            { arabic: 'نَجَحَ → نَجَاح', english: 'to succeed -> success' },
+            { arabic: 'فَسَدَ → فَسَاد', english: 'to corrupt -> corruption' },
+            { arabic: 'ضَلَّ → ضَلاَل', english: 'to go astray -> misguidance' },
+          ],
+          rules: [
+            'Pattern فَعَال for masdar: ذَهَاب, نَجَاح, فَسَاد',
+            'Pattern فُعَال for diseases: صُدَاع (headache), زُكَام (cold), دُوَار (dizziness), سُعَال (cough)',
           ],
         },
         {
           title: 'Response to an Oath',
           arabicTitle: 'جَوَابُ القَسَمِ',
           explanation:
-            'When the response to an oath is an affirmative verbal sentence with a past-tense verb, it is introduced with lam and qad.',
+            'When the response to an oath is an affirmative verbal sentence with a past-tense verb, it is introduced with lam and qad. If the verb is past tense but negative, the emphatic particle is not used. The waw of oaths is a preposition (waw al-qasam), distinct from waw al-atf (and).',
           examples: [
             { arabic: 'وَاللَّهِ لَقَدْ فَرِحْتُ كَثِيراً', english: 'By Allah, I was truly very happy.' },
             { arabic: 'لَقَدْ خَلَقْنَا الإِنْسَانَ فِي أَحْسَنِ تَقْوِيمٍ', english: 'We have created man in the best stature (Quran, al-Tin).' },
+            { arabic: 'وَاللَّهِ مَا رَأَيْتُهُ', english: 'By Allah, I did not see him (negative — no lam/qad).' },
+          ],
+          rules: [
+            'Affirmative past-tense jawab: وَاللَّهِ لَقَدْ + past verb',
+            'Negative past-tense jawab: وَاللَّهِ مَا + past verb (no emphatic particle)',
+            'The waw in واللهِ is waw al-qasam (a preposition), hence the noun is majrur',
           ],
         },
       ],
@@ -761,6 +899,11 @@ export const book8: Book = {
         { arabic: 'إِسْهَال', english: 'diarrhea', category: 'nouns' },
         { arabic: 'دُوَار', english: 'dizziness', category: 'nouns' },
         { arabic: 'حَشَرَة سَامَّة', english: 'poisonous insect', category: 'nouns' },
+        { arabic: 'التَّكْثِير', english: 'extensive action (large-scale)', category: 'grammar terms' },
+        { arabic: 'المُبَالَغَة', english: 'intensive action (emphasis)', category: 'grammar terms' },
+        { arabic: 'التَّضْعِيف', english: 'doubling of the second radical', category: 'grammar terms' },
+        { arabic: 'القَسَم', english: 'oath', category: 'grammar terms' },
+        { arabic: 'وَاو القَسَم', english: 'the waw of oath (a preposition)', category: 'grammar terms' },
         { arabic: 'إِنَّمَا', english: 'only, indeed (restriction)', category: 'particles' },
         { arabic: 'وَلَوْ', english: 'even if', category: 'particles' },
         { arabic: 'إِيَّاكَ وَ...', english: 'beware of...', category: 'expressions' },
